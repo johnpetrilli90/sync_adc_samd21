@@ -21,3 +21,8 @@ Using the Atmel Start GUI...
 3. Clock: Generic clock generator 0 (8MHz)
 4. Prescaler: Divide by 8
 5. Length of one timer tick in uS: 1000
+
+## Caveats
+- This ADC can output good full-scale results at lower frequencies up to ~3kHz (only 1 channel). If you need faster sampling w/ good performance my suggestion would be to choose an external ADC. 
+- Here is a nice calculator to play around with: https://blog.thea.codes/getting-the-most-out-of-the-samd21-adc/
+- Beware that the faster you make the ADC, the lower the input impedance will be. The source impedance seen by the ADC input should be buffered for best and consistent performance. s
